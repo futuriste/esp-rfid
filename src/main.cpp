@@ -229,7 +229,7 @@ void ICACHE_RAM_ATTR loop()
 	previousLoopMillis = currentMillis;
 
 	button.update();
-	if (button.fell()) 
+	if (button.fell())
 	{
 #ifdef DEBUG
 		Serial.println("Button has been pressed");
@@ -280,10 +280,10 @@ void ICACHE_RAM_ATTR loop()
 				Serial.print("mili : ");
 				Serial.println(millis());
 				Serial.println("deactivating relay now");
-#endif				
+#endif
 				digitalWrite(relayPin, !relayType);
 			}
-			activateRelay = false;	
+			activateRelay = false;
 		}
 	}
 	else if (lockType == 0)	// momentary relay mode
